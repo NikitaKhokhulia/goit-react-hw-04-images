@@ -1,3 +1,4 @@
+/* eslint-disable react-hooks/exhaustive-deps */
 import { useState, useEffect } from 'react';
 import { Container } from './App.styled';
 import Searchbar from './Searchbar/Searchbar';
@@ -39,7 +40,6 @@ export default function App() {
   };
 
   const handleFormSubmit = data => {
-    setImages([]);
     setPage(1);
     setSearchValue(data);
   };
@@ -63,14 +63,11 @@ export default function App() {
 
   if (status === Status.RESOLVED) {
     return (
-      <>
-        <Container>
-          <Searchbar onSubmit={handleFormSubmit} />
-          <ImageGallery images={images} />
-          <LoadMore onClick={handleLoadMore}></LoadMore>
-        </Container>
-      </>
+      <Container>
+        <Searchbar onSubmit={handleFormSubmit} />
+        <ImageGallery images={images} />
+        <LoadMore onClick={handleLoadMore}></LoadMore>
+      </Container>
     );
   }
 }
-

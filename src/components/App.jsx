@@ -40,6 +40,7 @@ export default function App() {
   };
 
   const handleFormSubmit = data => {
+    setImages([]);
     setPage(1);
     setSearchValue(data);
   };

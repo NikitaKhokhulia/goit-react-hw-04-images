@@ -9,7 +9,7 @@ import {
   SearchFormInput,
 } from './Searchbar.styled';
 
-export default function Searchbar({onSubmit}) {
+export default function Searchbar({ onSubmit }) {
   const [data, setData] = useState('');
 
   const handleDataChange = event => {

@@ -1,14 +1,15 @@
 import { ImageList } from './ImageGallery.styled';
 import ImageGalleryItem from 'components/ImageGalleryItem/ImageGalleryItem';
-import shortid from 'shortid';
+// import shortid from 'shortid';
 
 const ImageGallery = ({ images, toggle, showModal }) => {
   return (
     <ImageList>
       {images.map(image => {
+        console.log(image.id);
         return (
           <ImageGalleryItem
-            key={shortid.generate()}
+            key={image.id}
             image={image}
             toggle={toggle}
             showModal={showModal}
@@ -20,5 +21,3 @@ const ImageGallery = ({ images, toggle, showModal }) => {
 };
 
 export default ImageGallery;
-
-

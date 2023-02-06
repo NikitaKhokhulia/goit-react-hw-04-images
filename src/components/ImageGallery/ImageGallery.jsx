@@ -1,0 +1,24 @@
+import { ImageList } from './ImageGallery.styled';
+import ImageGalleryItem from 'components/ImageGalleryItem/ImageGalleryItem';
+import shortid from 'shortid';
+
+const ImageGallery = ({ images, toggle, showModal }) => {
+  return (
+    <ImageList>
+      {images.map(image => {
+        return (
+          <ImageGalleryItem
+            key={shortid.generate()}
+            image={image}
+            toggle={toggle}
+            showModal={showModal}
+          ></ImageGalleryItem>
+        );
+      })}
+    </ImageList>
+  );
+};
+
+export default ImageGallery;
+
+

@@ -6,7 +6,6 @@ const ImageGallery = ({ images, toggle, showModal }) => {
   return (
     <ImageList>
       {images.map(image => {
-        console.log(image.id);
         return (
           <ImageGalleryItem
             key={image.id}

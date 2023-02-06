@@ -1,6 +1,5 @@
 import { ImageList } from './ImageGallery.styled';
 import ImageGalleryItem from 'components/ImageGalleryItem/ImageGalleryItem';
-// import shortid from 'shortid';
 
 const ImageGallery = ({ images, toggle, showModal }) => {
   return (

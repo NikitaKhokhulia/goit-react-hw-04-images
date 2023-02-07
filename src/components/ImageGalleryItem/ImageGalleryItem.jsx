@@ -3,7 +3,7 @@ import { GalleryItem, GalleryItemImage } from './ImageGalleryItem.styled';
 import { ModalItem } from 'components/Modal/Modal';
 
 export default function ImageGalleryItem({ image }) {
-  const { showModal, setShowModal } = useState(false);
+  const [ showModal, setShowModal ] = useState(false);
 
   const toggleModal = () => {
     return setShowModal(showModal => !showModal);
@@ -20,4 +20,3 @@ export default function ImageGalleryItem({ image }) {
     </GalleryItem>
   );
 }
-

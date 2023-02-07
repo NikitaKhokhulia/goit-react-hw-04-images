@@ -67,7 +67,7 @@ export default function App() {
       <Container>
         <Searchbar onSubmit={handleFormSubmit} />
         <ImageGallery images={images} />
-        <LoadMore onClick={handleLoadMore}></LoadMore>
+        {images.length !== 0 && <LoadMore onClick={handleLoadMore}></LoadMore>}
       </Container>
     );
   }
